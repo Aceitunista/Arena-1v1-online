@@ -128,7 +128,7 @@ LÓGICA DE RED — Socket.io + Matchmaking Automático
 // 🔧 Cambiá esta URL por la de tu servidor una vez deployado en Railway
 const SERVER_URL = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
   ? 'http://localhost:3000'
-  : 'https://TU-APP.up.railway.app'; // ← reemplazá esto después del deploy
+  : 'https://arena-1v1-server.fly.dev'; // ← reemplazá esto después del deploy
 
 const socket = io(SERVER_URL, { autoConnect: true });
 

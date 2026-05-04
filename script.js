@@ -116,8 +116,7 @@ LÓGICA DE RED — WebSocket (solo inputs hacia el servidor)
 */
 const SERVER_URL = location.hostname === 'localhost' || location.hostname === '127.0.0.1'
   ? 'http://localhost:3000'
-  : 'https://api.cloudflare.com/client/v4/zones/04748d3ef23d45eaf7a1351d57db82a1/settings/websocket' // ← reemplazar con la URL de tu servidor
-
+  : 'https://arena-1v1-online-production.up.railway.app/'
 const socket = io(SERVER_URL, { autoConnect: true });
 
 let miSala         = null;

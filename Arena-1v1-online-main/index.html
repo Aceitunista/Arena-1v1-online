@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arena 1v1 Online</title>
+  <link rel="icon" href="pelota.webp" type="image/png">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+  <div id="mp-menu">
+    <div class="menu-box">
+      <h1>ARENA 1v1 ONLINE</h1>
+      <button id="btn-buscar">⚔ Buscar Partida</button>
+      <button id="btn-cancelar" style="display:none;">✕ Cancelar</button>
+      <p id="status-text"></p>
+    </div>
+  </div>
+
+  <div id="hud">
+    <div class="hud-player" id="hud-p1">
+      <div class="player-label">P1 (HOST)</div>
+      <div class="hearts" id="hearts-p1">❤️❤️❤️</div>
+      <div class="controls-hint">W/A/D · Espacio · Q/E skins</div>
+    </div>
+    <div class="hud-center">
+      <div id="round-label">ARENA 1v1</div>
+    </div>
+    <div class="hud-player" id="hud-p2">
+      <div class="player-label">P2 (CLIENTE)</div>
+      <div class="hearts" id="hearts-p2">❤️❤️❤️</div>
+      <div class="controls-hint">W/A/D · Espacio · Q/E skins</div>
+    </div>
+  </div>
+
+  <div id="nave-p1" class="nave-container">
+    <img class="cohete" src="atom.png" alt="P1">
+    <img class="fuego" src="destello.png" alt="fuego">
+  </div>
+  <div id="nave-p2" class="nave-container">
+    <img class="cohete" src="prototype.png" alt="P2">
+    <img class="fuego" src="destello_verde.png" alt="fuego">
+  </div>
+
+  <div id="win-screen">
+    <div class="menu-box" id="win-box">
+      <h1 id="win-text"></h1>
+      <button id="restart-btn">Nueva Partida Online</button>
+    </div>
+  </div>
+
+  <!-- CONTROLES TÁCTILES (joystick vintage — solo en móvil) -->
+  <div id="mobile-controls">
+    <div id="joystick-zone">
+      <div id="joystick-label">THRUST</div>
+      <div id="joystick-base">
+        <div id="joystick-knob"></div>
+      </div>
+    </div>
+    <div id="action-buttons">
+      <div class="skin-row">
+        <button id="btn-skin-prev" class="mobile-btn skin-btn" aria-label="Skin anterior">◀</button>
+        <button id="btn-skin-next" class="mobile-btn skin-btn" aria-label="Skin siguiente">▶</button>
+      </div>
+      <button id="btn-fire" class="mobile-btn fire-btn" aria-label="Disparar">⚡</button>
+    </div>
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
